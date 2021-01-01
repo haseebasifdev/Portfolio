@@ -1,0 +1,30 @@
+.navbarimg{
+    height: 700px;
+    background-image: url("../../images/code1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navigationbar{
+    position: fixed;
+}
+a{
+    color: white;
+}
+h1{
+    color: white;
+    height: 900px;
+}
+.navlinkblack{
+    color: black;
+    
+}
+.navlinkwhite{
+    color: white;
+    
+}
+/* .navlink:hover{
+    text-decoration-style: none;
+    text-decoration: none;
+} */
