@@ -2,3 +2,6 @@
 .about{
     margin-top: 80px;
 }
+.links:hover{
+    text-decoration: none;
+}
