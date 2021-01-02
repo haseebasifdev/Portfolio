@@ -4,6 +4,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+.name{
+    position: absolute;
+    top: 30%;
+    margin-left: 100px;
+    font-weight: 800;
 }
 
 .navigationbar{
@@ -18,13 +25,65 @@ h1{
 }
 .navlinkblack{
     color: black;
+    text-transform: uppercase;
     
 }
 .navlinkwhite{
     color: white;
+    text-transform: uppercase;
     
 }
-/* .navlink:hover{
-    text-decoration-style: none;
+.navlinkblack:hover{
     text-decoration: none;
-} */
+    color: black;
+    border-bottom: 1px solid black;
+}
+.navlinkwhite:hover{
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    
+}
+.name-div{
+   font-family: 'Lato', 'Open Sans', sans-serif;
+   
+}
+.name h1{
+    font-size: 64px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    line-height: 1.2;
+    margin-right: -20px;
+}
+
+.animate{
+  position: relative;
+  top: 400px;
+  font-size: 1vw;
+  color: #ffffff00;
+  text-transform: uppercase;
+  overflow: hidden;
+  content: counter(datatextb);
+
+}
+
+.animate::before{
+    content: attr(dataText);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #f8f8f8;
+    border-right: 1px solid #ffffff;
+    overflow: hidden;
+    animation: example 3s linear infinite;
+    animation-delay: 4s;
+
+}
+@keyframes example{
+    0% ,10%,100%  {width: 0;}
+    70%,90%  {width: 15%;}
+
+  
+}

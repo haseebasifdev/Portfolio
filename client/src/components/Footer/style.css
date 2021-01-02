@@ -1,0 +1,15 @@
+.footer{
+    margin-top: 80px;
+    background-color: #111;
+    
+}
+.row-footer{
+    padding: 100px;
+}
+a.footerimg{
+    text-decoration: none;
+    /* background-color: white ;  */
+}
+.git{
+    border-radius: 50px;
+}

@@ -37,22 +37,22 @@ const About = () => {
                     <div className="font-weight-bolder">
                         Let's Build Something cool.
                     </div>
-                    <br/>
+                    <br />
                     <div>
                         <h6 className="mb-2">
-                            <span className="text-primary">Mail</span>: 
+                            <span className="text-primary">Mail</span>:
                             <a className="text-muted links" href="mailto:haseebasif147@gmail.com"> haseebasif147@gmail.com</a>
                         </h6>
                         <h6 className="mb-2">
-                            <span className="text-primary">Phone</span>: 
+                            <span className="text-primary">Phone</span>:
                             <a className="text-muted links" href="tel:+923008888888"> +923008888888</a>
                         </h6>
                         <h6 className="mb-2">
-                            <span className="text-primary">Linkedin</span>: 
+                            <span className="text-primary">Linkedin</span>:
                             <a className="text-muted links" href="https://www.linkedin.com/in/haseebasif01/" target="_blank"> https://www.linkedin.com/in/haseebasif01/</a>
                         </h6>
                         <h6 className="mb-2">
-                            <span className="text-primary">Github</span>: 
+                            <span className="text-primary">Github</span>:
                             <a className="text-muted links" href="https://github.com/haseebasifdev" target="_blank"> https://github.com/haseebasifdev</a>
                         </h6>
                     </div>
