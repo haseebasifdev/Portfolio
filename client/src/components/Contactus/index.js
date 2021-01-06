@@ -2,7 +2,7 @@ import React from 'react'
 import "./style.css"
 const Contactus = () => {
     return (
-        <div className="container">
+        <div className="container" id="contact">
             <br />
             <br />
             <br />
@@ -30,7 +30,7 @@ const Contactus = () => {
                             <textarea className="form-control shadow-none border p-4" placeholder="Your Message" rows="3"></textarea>
                         </div>
 
-                        <button type="submit" className="btn btn-primary">Sign in</button>
+                        <button type="submit" className="btn btn-dark px-4 font-weight-bold">Send Message</button>
                     </form>
                 </div>
                 <div className="col-md-5">

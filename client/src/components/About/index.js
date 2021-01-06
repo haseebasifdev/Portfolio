@@ -3,7 +3,7 @@ import image from "../../images/haseeb.jpg"
 import "./style.css"
 const About = () => {
     return (
-        <div className="about container">
+        <div className="about container" id="about">
             <div className="row">
                 <div className="col-md-5 col-sm-12 imgcol px-4 mb-4">
                     <img width="100%" src={image} />
