@@ -1,4 +1,8 @@
 .icon{
-    border: 1px solid rgb(126, 193, 255);
-    border-radius: 100px;
+   
+padding: 10px;
+text-align: center;
+border-radius: 50%; 
+border: 1px solid;
+   
 }

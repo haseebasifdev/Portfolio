@@ -10,10 +10,12 @@ exports.validateContactMe=[
     check("email")
     .isEmail()
     .withMessage("Email is Required or Invalid Email"),
+    
     check("subject")
     .notEmpty()
     .isLength({min:3})
     .withMessage("subject require min 3 letters"),
+
     check("message")
     .notEmpty()
     .isLength({min:3})

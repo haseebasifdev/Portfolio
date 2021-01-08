@@ -23,10 +23,12 @@ h1{
     color: white;
     height: 900px;
 }
+.navlink{
+    display: block;
+}
 .navlinkblack{
     color: black;
     text-transform: uppercase;
-    
 }
 .navlinkwhite{
     color: white;
@@ -35,10 +37,14 @@ h1{
 }
 .navlinkblack:hover{
     text-decoration: none;
+    
+    
     color: black;
     border-bottom: 1px solid black;
 }
 .navlinkwhite:hover{
+    
+    
     color: white;
     text-decoration: none;
     border-bottom: 1px solid white;
@@ -102,6 +108,18 @@ li>a:hover{
     right: 20px;
     bottom: 20px;
 }
+
 .mybtn{
     border-radius: 50%;
+}
+.linktop{
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%; 
+    background: #fff;
+    /* border: 1px solid; */
+}
+.linktop:hover{
+    cursor: pointer;
 }

@@ -20,4 +20,4 @@ const Contactme=mongoose.Schema({
     },
 })
 
-module.exports=mongoose.model("User",Contactme);
+module.exports=mongoose.model("ContactMe",Contactme);

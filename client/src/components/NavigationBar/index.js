@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Navbar, Button, Form, FormControl, Nav } from "react-bootstrap"
+import { FaAngleDoubleUp } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom'
 import Typical from "react-typical/dist/index"
 // import  from 'react-typical'
@@ -37,12 +38,13 @@ const NavigationBar = () => {
     return (
         <div>
             <div className="navbarimg" id="home">
-                <Navbar bg={navbar ? "light" : "transparent"} expand="lg" fixed="top" >
+                <Navbar bg={navbar ? "light" : "transparent"} expand="lg" fixed="top" className="py-3">
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mr-auto justify-content-end">
+                        <Nav className="">
 
                             <li className={`${navlink} font-weight-bold navlink mx-2`}>
-                                <Link activeClass="active" to="home" spy={true} smooth={true}>Home</Link></li>
+                                <Link to="home" spy={true} smooth={true}>Home</Link></li>
                             <li className={`${navlink} font-weight-bold navlink mx-2`}>
                                 <Link to="about" spy={true} smooth={true}>About</Link></li>
                             <li className={`${navlink} font-weight-bold navlink mx-2`}>
@@ -68,11 +70,11 @@ const NavigationBar = () => {
                         Computer Scientists
                         </h4>
                 </div>
-                <div className="scroll">
-                    <Link to="home" spy={true} smooth={true}>
-                        <button className={`btn btn-outline-dark mybtn ${scrollbtn}`}>
-                            <i class="material-icons">arrow_drop_up</i>
-                        </button>
+                <div className={`scroll ${scrollbtn} bg-dark linktop `}>
+                    <Link to="home" className={``} spy={true} smooth={true}>
+                        {/* <button className={`btn btn-outline-dark mybtn ${scrollbtn}`}> */}
+                        <FaAngleDoubleUp className="text-white" size={25} />
+                        {/* </button> */}
                     </Link>
                 </div>
 
