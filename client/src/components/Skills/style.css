@@ -6,3 +6,10 @@
 .skillimage{
     border-radius: 10px;
 }
+.skillimage{
+animation: skillsimage 1s linear;
+}
+@keyframes skillsimage{
+    from{transform: translateY(-200px);}
+    to{transform: translateY(0);}
+}

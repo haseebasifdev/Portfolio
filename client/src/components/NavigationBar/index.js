@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import { Navbar, Button, Form, FormControl, Nav } from "react-bootstrap"
+import React, { useEffect, useState } from 'react'
+import { Navbar, Form, FormControl, Nav } from "react-bootstrap"
 import { FaAngleDoubleUp } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom'
-import Typical from "react-typical/dist/index"
+import ReactRotatingText from 'react-rotating-text';
 // import  from 'react-typical'
 import { Link } from 'react-scroll'
 import "./style.css"
@@ -32,9 +31,12 @@ const NavigationBar = () => {
     }
     window.addEventListener('scroll', changeBackgrounf)
     window.addEventListener('scroll', scroolbtn)
+    const data = ["An array", "of strings", "to pass the component"]; // Required
+    const interval = 3000; // The time to wait before rendering the next string
+    const typistProps = {} // Props that are passed to the react-typist component
+    // 
+    // 
 
-    // 
-    // 
     return (
         <div>
             <div className="navbarimg" id="home">
@@ -63,18 +65,21 @@ const NavigationBar = () => {
                 <div className="container-fluid name-div">
 
                     <div className="name text-white">
-                        <h1 style={{ "font-weight": "700" }}>Haseeb<br /> Asif</h1>
+                        <h1 style={{ "font-weight": "700" }}>Haseeb<br />Asif</h1>
+                        
                         <br />
                     </div>
-                    <h4 className="animate container" dataText="Computer_Scientist">
-                        Computer Scientists
-                        </h4>
+                    <div className="typeWritertext">
+                        <span style={{}}><ReactRotatingText items={['Computer Scientist ', 'Full-Stack Developer ', 'Coder ']} />
+                            <br />
+                            <br />
+                            <button className="btn btn-dark">Resume</button>
+                        </span>
+                    </div>
                 </div>
                 <div className={`scroll ${scrollbtn} bg-dark linktop `}>
                     <Link to="home" className={``} spy={true} smooth={true}>
-                        {/* <button className={`btn btn-outline-dark mybtn ${scrollbtn}`}> */}
-                        <FaAngleDoubleUp className="text-white" size={25} />
-                        {/* </button> */}
+                       <FaAngleDoubleUp className="text-white" size={25} />
                     </Link>
                 </div>
 

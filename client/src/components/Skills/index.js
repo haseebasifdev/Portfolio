@@ -19,7 +19,7 @@ const Skills = () => {
                 <div className="my-auto d-flex align-items-center justify-content-center img">
                   <img className="skillimage" src={`/images/${skill}.svg`} alt={`${skill} image`} width="40%" height="100px  " />
                 </div>
-                <h4 className="mt-2">
+                <h4 className="mt-2 skillsname">
                   {skill}
                 </h4>
               </div>

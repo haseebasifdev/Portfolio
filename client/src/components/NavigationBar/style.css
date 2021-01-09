@@ -1,6 +1,6 @@
 .navbarimg{
     height: 700px;
-    background-image: url("../../images/code1.jpg");
+    background-image: url("../../images/code3.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 .name{
     position: absolute;
     top: 30%;
-    margin-left: 100px;
+    left: 8%;
     font-weight: 800;
 }
 
@@ -62,37 +62,6 @@ h1{
     margin-right: -20px;
 }
 
-.animate{
-  position: relative;
-  top: 400px;
-  font-size: 1vw;
-  color: #ffffff00;
-  text-transform: uppercase;
-  overflow: hidden;
-  content: counter(datatextb);
-
-}
-
-.animate::before{
-    content: attr(dataText);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: #f8f8f8;
-    border-right: 1px solid #ffffff;
-    overflow: hidden;
-    animation: example 3s linear infinite;
-    animation-delay: 4s;
-
-}
-@keyframes example{
-    0% ,10%,100%  {width: 0;}
-    70%,90%  {width: 15%;}
-
-  
-}
 li{
     cursor: pointer;
 }
@@ -120,6 +89,28 @@ li>a:hover{
     background: #fff;
     /* border: 1px solid; */
 }
+.typeWritertext{
+    position: absolute;
+    color: white;
+    top: 55%;
+    left: 8%;
+}
+
 .linktop:hover{
     cursor: pointer;
 }
+.react-rotating-text-cursor {
+    animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+  }
+  
+  @keyframes blinking-cursor {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
