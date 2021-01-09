@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Navbar, Form, FormControl, Nav } from "react-bootstrap"
 import { FaAngleDoubleUp } from 'react-icons/fa';
 import ReactRotatingText from 'react-rotating-text';
-// import  from 'react-typical'
 import { Link } from 'react-scroll'
 import "./style.css"
 const NavigationBar = () => {
@@ -18,7 +17,6 @@ const NavigationBar = () => {
             setnavbar(false)
             setnavlink("navlinkwhite")
         }
-        // console.log({navbar,navlink});
     }
     const scroolbtn = () => {
         if (window.scrollY >= 400) {
@@ -27,16 +25,9 @@ const NavigationBar = () => {
         else {
             setscrollbtn("invisible")
         }
-        // console.log({navbar,navlink});
     }
     window.addEventListener('scroll', changeBackgrounf)
     window.addEventListener('scroll', scroolbtn)
-    const data = ["An array", "of strings", "to pass the component"]; // Required
-    const interval = 3000; // The time to wait before rendering the next string
-    const typistProps = {} // Props that are passed to the react-typist component
-    // 
-    // 
-
     return (
         <div>
             <div className="navbarimg" id="home">
@@ -57,8 +48,6 @@ const NavigationBar = () => {
                                 <Link to="tools" spy={true} smooth={true}>Tools</Link></li>
                             <li className={`${navlink} font-weight-bold navlink mx-2`}>
                                 <Link to="contact" spy={true} smooth={true}>Contact me</Link></li>
-                            {/* <NavLink className={`${navlink} font-weight-bold navlink `} to="/">Home</NavLink> */}
-
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
