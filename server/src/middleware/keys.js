@@ -1,0 +1,1 @@
+exports.JWT_SECRET="afn78wry4r4f7hqST6d78Da7weqfe"
