@@ -59,7 +59,8 @@ const NavigationBar = () => {
                         <br />
                     </div>
                     <div className="typeWritertext">
-                        <span style={{}}><ReactRotatingText items={['Computer Scientist ', 'Full-Stack Developer ', 'Coder ']} />
+                        <span>
+                            <ReactRotatingText className="title" items={['Computer Scientist ', 'Full-Stack Developer    ', 'Coder  ',"BUG SQUASHER  "]} />
                             <br />
                             <br />
                             <a  href="https://github.com/haseebasifdev" target="_blank"  role="button" className="btn btn-dark">Resume</a>

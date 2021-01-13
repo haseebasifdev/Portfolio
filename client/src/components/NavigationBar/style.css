@@ -48,6 +48,12 @@ a{
    font-family: 'Lato', 'Open Sans', sans-serif;
    
 }
+.title{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
 .name h1{
     font-size: 64px;
     text-transform: uppercase;
