@@ -1,7 +1,11 @@
 import './App.css';
 import Home from './components/Home';
 import About from './components/About';
-import {BrowserRouter as Router,Switch,Route,} from 'react-router-dom'
+import {
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Tools from './components/Tools';
