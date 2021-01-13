@@ -22,11 +22,11 @@ a{
 
 .navlinkblack{
     color: black;
-    text-transform: uppercase;
+    
 }
 .navlinkwhite{
     color: white;
-    text-transform: uppercase;
+    
     
 }
 .navlinkblack:hover{

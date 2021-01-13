@@ -47,7 +47,7 @@ const NavigationBar = () => {
                             <li className={`${navlink} font-weight-bold navlink mx-2`}>
                                 <Link to="tools" spy={true} smooth={true}>Tools</Link></li>
                             <li className={`${navlink} font-weight-bold navlink mx-2`}>
-                                <Link to="contact" spy={true} smooth={true}>Contact me</Link></li>
+                                <Link to="contact" spy={true} smooth={true}>Contact</Link></li>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
@@ -62,7 +62,7 @@ const NavigationBar = () => {
                         <span style={{}}><ReactRotatingText items={['Computer Scientist ', 'Full-Stack Developer ', 'Coder ']} />
                             <br />
                             <br />
-                            <button className="btn btn-dark">Resume</button>
+                            <a  href="https://github.com/haseebasifdev" target="_blank"  role="button" className="btn btn-dark">Resume</a>
                         </span>
                     </div>
                 </div>
