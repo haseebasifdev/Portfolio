@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Navbar, Form, FormControl, Nav } from "react-bootstrap"
-import { FaAngleDoubleUp } from 'react-icons/fa';
+import { FaAngleDoubleUp,FaAngleDoubleDown } from 'react-icons/fa';
 import ReactRotatingText from 'react-rotating-text';
 import { Link } from 'react-scroll'
 import "./style.css"
@@ -70,6 +70,11 @@ const NavigationBar = () => {
                 <div className={`scroll ${scrollbtn} bg-dark linktop `}>
                     <Link to="home" className={``} spy={true} smooth={true}>
                        <FaAngleDoubleUp className="text-white" size={25} />
+                    </Link>
+                </div>
+                <div className={`gotoprofile`}>
+                    <Link to="about" className={`btn btn-outline-dark btn-sm border`} spy={true} smooth={true}>
+                       <FaAngleDoubleDown className="text-white" size={15} />
                     </Link>
                 </div>
 

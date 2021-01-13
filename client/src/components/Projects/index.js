@@ -4,8 +4,8 @@ import React from 'react'
 import "./style.css"
 const Projects = () => {
   return (
-    <div className="projects">
-      <h1 className="text-center font-weight-bold">Projects</h1>
+    <div className="">
+      <h1 className="projects text-center font-weight-bold">Projects</h1>
       <div className="text-center">
 
       <h6 >Worried About my coding experience? Check them here:</h6>

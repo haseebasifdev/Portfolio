@@ -6,6 +6,14 @@
     background-repeat: no-repeat;
     position: relative;
 }
+.gotoprofile{
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    margin-left: -50px;
+    /* right: 50%; */
+    align-items: center;
+}
 .name{
     position: absolute;
     top: 30%;
