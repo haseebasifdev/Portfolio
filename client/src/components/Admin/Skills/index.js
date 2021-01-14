@@ -4,6 +4,8 @@ import AdminNavbar from '../Navbar'
 import "./style.css"
 import axios from 'axios'
 import axiosInstance from '../../../helpers/axios'
+import Skills from '../../Skills'
+import Tools from '../../Tools'
 const AdminSkills = () => {
     const [show, setShow] = useState(false);
     const [name, setname] = useState("")
@@ -45,6 +47,8 @@ const AdminSkills = () => {
     return (
         <div>
             <AdminNavbar>
+                <Skills/>
+                <Tools/>
                 <Modal
                     show={show}
                     onHide={() => setShow(false)}

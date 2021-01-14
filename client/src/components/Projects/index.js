@@ -12,14 +12,13 @@ const Projects = () => {
         <a className="btn btn-primary text-center my-4" href="https://github.com/haseebasifdev" target="_blank" role="button">Github</a>
       </div>
       <div className="text-center mb-4">
-        <button type="button" class="btn mx-2 btn-primary">Primary</button>
-        <button type="button" class="btn mx-2 btn-secondary">Secondary</button>
-        <button type="button" class="btn mx-2 btn-success">Success</button>
-        <button type="button" class="btn mx-2 btn-danger">Danger</button>
-        <button type="button" class="btn mx-2 btn-warning">Warning</button>
-        <button type="button" class="btn mx-2 btn-info">Info</button>
-        <button type="button" class="btn mx-2 btn-light">Light</button>
-        <button type="button" class="btn mx-2 btn-dark">Dark</button>
+        <button type="button" class="btn mx-2 btn-primary">JavaScript</button>
+        <button type="button" class="btn mx-2 btn-secondary">Laravel</button>
+        <button type="button" class="btn mx-2 btn-success">Vue.js</button>
+        <button type="button" class="btn mx-2 btn-danger">React.js</button>
+        <button type="button" class="btn mx-2 btn-warning">Android</button>
+        <button type="button" class="btn mx-2 btn-info">Python</button>
+        <button type="button" class="btn mx-2 btn-light">C++</button>
       </div>
       <div className="row">
         <div className="col-4">

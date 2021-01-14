@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Navbar, Form, FormControl, Nav } from "react-bootstrap"
-import { FaAngleDoubleUp,FaAngleDoubleDown } from 'react-icons/fa';
+import { FaAngleDoubleUp, FaAngleDoubleDown } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import ReactRotatingText from 'react-rotating-text';
 import { NavLink } from 'react-router-dom';
@@ -51,11 +51,11 @@ const NavigationBar = () => {
                                 <Link to="tools" spy={true} smooth={true}>Tools</Link></li>
                             <li className={`${navlink} font-weight-bold navlink mx-2`}>
                                 <Link to="contact" spy={true} smooth={true}>Contact</Link></li>
-                                {
-                                    auth?
-                            <li>
-                                <NavLink className={`${navlink} font-weight-bold navlink mx-2`} to="/admin" >Admin</NavLink></li>:""
-                                }
+                            {
+                                auth ?
+                                    <li>
+                                        <NavLink className={`${navlink} font-weight-bold navlink mx-2`} to="/admin/skills" >Admin</NavLink></li> : ""
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
@@ -63,26 +63,26 @@ const NavigationBar = () => {
 
                     <div className="name text-white">
                         <h1 style={{ "font-weight": "700" }}>Haseeb<br />Asif</h1>
-                        
+
                         <br />
                     </div>
                     <div className="typeWritertext">
                         <span>
-                            <ReactRotatingText className="title" items={['Computer Scientist ', 'Full-Stack Developer    ', 'Coder  ',"BUG SQUASHER  "]} />
+                            <ReactRotatingText className="title" items={['Computer Scientist ', 'Full-Stack Developer    ', 'Coder  ', "BUG SQUASHER  "]} />
                             <br />
                             <br />
-                            <a  href="https://github.com/haseebasifdev" target="_blank"  role="button" className="btn btn-dark">Resume</a>
+                            <a href="https://github.com/haseebasifdev" target="_blank" role="button" className="btn btn-dark">Resume</a>
                         </span>
                     </div>
                 </div>
                 <div className={`scroll ${scrollbtn} bg-dark linktop `}>
                     <Link to="home" className={``} spy={true} smooth={true}>
-                       <FaAngleDoubleUp className="text-white" size={25} />
+                        <FaAngleDoubleUp className="text-white" size={25} />
                     </Link>
                 </div>
                 <div className={`gotoprofile`}>
                     <Link to="about" className={`btn btn-outline-dark btn-sm border`} spy={true} smooth={true}>
-                       <FaAngleDoubleDown className="text-white" size={15} />
+                        <FaAngleDoubleDown className="text-white" size={15} />
                     </Link>
                 </div>
 

@@ -27,7 +27,7 @@ const AdminNavbar = (props) => {
                             <NavLink className="nav-link" to="/admin/skills">Skills <span className="sr-only">(current)</span></NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
+                            <NavLink to="/admin/projects" className="nav-link">Projects</NavLink>
                         </li>
                         <li className="nav-item logout">
                             <button onClick={()=>Logout()} className="nav-link btn btn-danger ">Logout</button>

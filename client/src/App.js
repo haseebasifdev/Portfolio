@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { initialData, isLoggedIn } from './action/auth.action';
 import { useEffect } from 'react';
 import AdminSkills from './components/Admin/Skills';
+import Projects from './components/Admin/Projects';
 function App() {
   const auth = useSelector(state => state.auth)
   const dispatch = useDispatch()
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/login" component={Login}/>
           <PrivateRoutes exact path="/admin" component={Admin}/>
           <PrivateRoutes path="/admin/skills" component={AdminSkills}/>
+          <PrivateRoutes path="/admin/projects" component={Projects}/>
         </Switch>
     </div>
   );

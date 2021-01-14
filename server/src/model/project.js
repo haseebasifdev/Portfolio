@@ -24,13 +24,13 @@ const Project = mongoose.Schema({
     }],
     industry: {
         type: String,
-        required: true,
     },
     live: {
         type: String,
     },
     github: {
         type: String,
+        required:true
     },
 })
 

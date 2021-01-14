@@ -13,7 +13,7 @@ const Skills = () => {
         {
           skills.map(skill => {
             return (
-              <div className="col-md-4 col-xs-6 col-sm-6 col-xl-3 text-center my-3">
+              <div key={skill._id} className="col-md-4 col-xs-6 col-sm-6 col-xl-3 text-center my-3">
                 <div className="my-auto d-flex align-items-center justify-content-center img">
                   <img className="skillimage" src={skill.image} alt={`${skill.name} image`} width="30%" height="100px  " />
                 </div>
