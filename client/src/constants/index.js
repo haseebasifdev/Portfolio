@@ -3,7 +3,11 @@ export const SkillsConstants={
     SKILL_SUCCESS:"SKILL_SUCCESS",
     SKILL_FAILURE:"SKILL_FAILURE",
 }
-
+export const initialDataConstants={
+    DATA_REQUEST:"DATA_REQUEST",
+    DATA_SUCCESS:"DATA_SUCCESS",
+    DATA_FAILURE:"DATA_FAILURE",
+}
 export const authConstants={
     LOGIN_REQUEST:"LOGIN_REQUEST",
     LOGIN_SUCCESS:'LOGIN_SUCCESS',

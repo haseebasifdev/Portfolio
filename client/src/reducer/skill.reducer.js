@@ -2,6 +2,7 @@ import { SkillsConstants } from "../constants";
 
 const initialState={
     skills:[],
+    tools:[],
     loading:false,
     error:{}
 }
@@ -18,13 +19,14 @@ export default (state = initialState, action)=> {
       return {
         ...state,
         loading:false,
-        skills:action.payload.skills    
+        skills:action.payload.skills,
+        tools:action.payload.tools,
       };
     case SkillsConstants.SKILL_FAILURE:
       return {
         ...state,
         loading:false,
-        skills:action.payload.error    
+        skills:action.payload.error
       };
      
     default:

@@ -1,7 +1,7 @@
 import { api } from "../urlConfig";
 import store from '../store'
 import axios from 'axios'
-const token=window.localStorage.getItem('token')
+const token=window.localStorage.getItem('token')    
 const axiosInstance=axios.create({
     baseURL:api,
     headers:{

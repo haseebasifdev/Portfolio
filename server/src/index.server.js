@@ -9,6 +9,7 @@ app.use(express.json());
 const contactRoute=require("./route/ContactMe")
 const projectRoute=require("./route/project")
 const AuthRoute=require("./route/auth")
+const SkillRoute=require("./route/skill")
 app.get("/", (req, res) => {
     res.send("Hello to the future")
 });
@@ -16,6 +17,7 @@ const port = process.env.PORT || 5000;
 app.use("/api",contactRoute)
 app.use("/api",projectRoute)
 app.use("/api",AuthRoute)
+app.use("/api",SkillRoute)
 mongoose.connect(process.env.MONGODBURL,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(res=>{
     console.log("Database Connected");

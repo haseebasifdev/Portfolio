@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, Redirect } from 'react-router-dom'
 import {sigout} from "../../../action/auth.action"
 import "./style.css"
-const AdminNavbar = () => {
+const AdminNavbar = (props) => {
     
     const dispatch=useDispatch()
     const Logout=()=>{
@@ -24,7 +24,7 @@ const AdminNavbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <NavLink className="nav-link" to="/">Skills <span className="sr-only">(current)</span></NavLink>
+                            <NavLink className="nav-link" to="/admin/skills">Skills <span className="sr-only">(current)</span></NavLink>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Link</a>
@@ -35,6 +35,9 @@ const AdminNavbar = () => {
                     </ul>
                 </div>
             </nav>
+            {
+                props.children
+            }
         </div>
     )
 }

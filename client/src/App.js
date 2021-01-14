@@ -9,15 +9,16 @@ import {
 import Login from './components/Login';
 import Admin from './components/Admin';
 import { useDispatch, useSelector } from 'react-redux';
-import { isLoggedIn } from './action/auth.action';
+import { initialData, isLoggedIn } from './action/auth.action';
 import { useEffect } from 'react';
+import AdminSkills from './components/Admin/Skills';
 function App() {
   const auth = useSelector(state => state.auth)
   const dispatch = useDispatch()
   useEffect(() => {
     if (!auth.authencate) {
       dispatch(isLoggedIn())
-      // dispatch(initialData())
+      dispatch(initialData())
     }
   }, [])
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route exact path={`/`} component={Home}/>
           <Route exact path="/login" component={Login}/>
           <PrivateRoutes exact path="/admin" component={Admin}/>
+          <PrivateRoutes path="/admin/skills" component={AdminSkills}/>
         </Switch>
     </div>
   );

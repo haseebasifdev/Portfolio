@@ -1,5 +1,5 @@
 import axios from "../helpers/axios"
-import { authConstants } from "../constants"
+import { authConstants, initialDataConstants, SkillsConstants } from "../constants"
 
 export const login = (userData) => {
     return async (dispatch) => {
@@ -57,6 +57,34 @@ export const isLoggedIn=()=>{
                 }
             })
         }
+    }
+}
+
+export const initialData=()=>{
+    return async dispatch=>{
+        const res= await axios.get("/skills");
+        if(res.status==200)
+        {
+            dispatch({
+                type:SkillsConstants.SKILL_SUCCESS,
+                payload:{
+                    skills:res.data.skills,
+                    tools:res.data.tools,
+                }
+            })
+        }
+        else{
+            dispatch({
+                type:SkillsConstants.SKILL_SUCCESS,
+                payload:{
+                   error:res.error
+                }
+            })
+        }
+            
+     
+           
+       
     }
 }
 
