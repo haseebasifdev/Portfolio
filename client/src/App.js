@@ -1,28 +1,31 @@
 import './App.css';
 import Home from './components/Home';
-import About from './components/About';
+import PrivateRoutes from "./components/PrivateRoutes/PrivateRoute"
 import {
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Tools from './components/Tools';
-import Contactus from './components/Contactus';
-import Footer from './components/Footer';
+import Login from './components/Login';
+import Admin from './components/Admin';
+import { useDispatch, useSelector } from 'react-redux';
+import { isLoggedIn } from './action/auth.action';
+import { useEffect } from 'react';
 function App() {
+  const auth = useSelector(state => state.auth)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    if (!auth.authencate) {
+      dispatch(isLoggedIn())
+      // dispatch(initialData())
+    }
+  }, [])
   return (
     <div className="App">
-      <About/> 
-      <Projects/>
-      <Skills/>
-      <Tools/>
-      <Contactus/>
-      <Footer/>
         <Switch>
-          {/* <Route to={`/`} component={Home}/>
-          <Route to={`/about`}  component={About}/> */}
+          <Route exact path={`/`} component={Home}/>
+          <Route exact path="/login" component={Login}/>
+          <PrivateRoutes exact path="/admin" component={Admin}/>
         </Switch>
     </div>
   );

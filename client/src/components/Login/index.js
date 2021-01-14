@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, Redirect } from 'react-router-dom'
-import { login } from '../../actions/auth.acton'
+import { login } from '../../action/auth.action'
 import loader from "../../pictures/loading3.gif"
+import "./style.css"
 const Login = () => {
-  const auth=useSelector(state=>state.auth)
+  const auth = useSelector(state => state.auth)
   const dispatch = useDispatch()
   const [email, setemail] = useState("")
   const [password, setpassword] = useState("")
-  const siginForm=(e)=>{
+  const siginForm = (e) => {
     e.preventDefault();
-    const data={
+    const data = {
       email,
       password
     }
@@ -19,46 +20,42 @@ const Login = () => {
     // console.log(res.data);
   }
   if (auth.authencate) {
-    return <Redirect to="/" />
+    return <Redirect to="/admin" />
   }
   return (
-    <div className="mycard">
+    <div className="mycard d-flex justify-content-center ">
       {
-        auth.loading?
-      <div className=" rouded text-center loader">
-        <img src={loader}
-        className=" loader "
-        width="200px"/>
-      </div>:""
+        auth.loading ?
+          <div className=" rouded text-center loader">
+            <img src={loader}
+              className=" loader "
+              width="200px" />
+          </div> : ""
       }
-       <div className="card auth-card input-field">
-         <h2>Instagram</h2>
-         <form  className="commentForm" onSubmit={siginForm}>
+      <div  className="card p-4 ">
+        <h2>Haseeb Asif</h2>
+        <form className="commentForm" onSubmit={siginForm}>
+          <div className="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+              type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+          </div>
+          <div className="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              value={password}
+              onChange={(e) => setpassword(e.target.value)}
+              type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+          </div>
+          <div className="text-center">
 
-         <input
-         placeholder="Email"
-         type="email"
-         value={email}
-         onChange={(e)=>setemail(e.target.value)}
-         />
-         <input
-         placeholder="Password"
-         type="password"
-         value={password}
-         onChange={(e)=>setpassword(e.target.value)}
-         />
-         <button className="btn blue waves-effect waves-light"
-         onClick={siginForm}
-         type="submit"
-         >
-           Login
-         </button>
-           </form>
-         <h6>
-         No Account yet? 
-         
-             <Link to="/signin"> Login</Link>
-         </h6>
+          <button
+            onClick={siginForm}
+            type="submit" className="btn btn-outline-dark btn-block ">Login</button>
+            </div>
+        </form>
       </div>
     </div>
   )

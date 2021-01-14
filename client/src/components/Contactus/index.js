@@ -49,7 +49,7 @@ const Contactus = () => {
     }
     
     return (
-        <div className="container" id="contact">
+        <div className="container" >
             <br />
             <br />
             <br />

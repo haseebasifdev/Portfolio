@@ -47,20 +47,25 @@ exports.signin= (req, res) => {
     }
     User.findOne({email}).
     then(user=>{
-        console.log({FindededUser:user.password,Requested:req.body});
-        bcrypt.compare(password,user.password)
-        .then(matched=>{
-            if(matched){
-                const {_id,name,email}=user
-                const token=JWT.sign({_id:user._id},JWT_SECRET)
-                return res.status(200).json({token,user:{_id,name,email}})
-            }
-            else{
-                return res.status(400).json({error:"invalid email or password"})
-            }
-        }).catch(error=>{
-            console.log(error);
-        })
+        // console.log({FindededUser:user.password,Requested:req.body}); 
+        if(user){
+            bcrypt.compare(password,user.password)
+            .then(matched=>{
+                if(matched){
+                    const {_id,name,email}=user
+                    const token=JWT.sign({_id:user._id},JWT_SECRET)
+                    return res.status(200).json({token,user:{_id,name,email}})
+                }
+                else{
+                    return res.status(400).json({error:"invalid email or password"})
+                }
+            }).catch(error=>{
+                console.log(error);
+            })
+        }
+        else{
+            return res.status(400).json({error:"Account Not Found"})
+        }
     })
     .catch(err=>{
         console.log(err);

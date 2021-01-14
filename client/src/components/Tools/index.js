@@ -5,7 +5,7 @@ const Tools = () => {
   const skills = ["GitHub","Git","Postman","npm","VS-Code","Xampp"]
   const src = "/static/media/Bootstrap.0c209802.png"
   return (
-    <div className="container tools" id="tools">
+    <div className="container tools" >
       <h1 className="text-center font-weight-bold">Tools</h1>
       <div className=" text-center">My weapons of choice to help tackle any project.</div>
       <br />

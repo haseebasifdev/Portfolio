@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Navbar, Form, FormControl, Nav } from "react-bootstrap"
 import { FaAngleDoubleUp,FaAngleDoubleDown } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 import ReactRotatingText from 'react-rotating-text';
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll'
 import "./style.css"
 const NavigationBar = () => {
+    const auth = useSelector(state => state.auth.authencate)
     const [navbar, setnavbar] = useState(false)
     const [navlink, setnavlink] = useState("navlinkwhite")
     const [scrollbtn, setscrollbtn] = useState("invisible")
@@ -48,6 +51,11 @@ const NavigationBar = () => {
                                 <Link to="tools" spy={true} smooth={true}>Tools</Link></li>
                             <li className={`${navlink} font-weight-bold navlink mx-2`}>
                                 <Link to="contact" spy={true} smooth={true}>Contact</Link></li>
+                                {
+                                    auth?
+                            <li>
+                                <NavLink className={`${navlink} font-weight-bold navlink mx-2`} to="/admin" >Admin</NavLink></li>:""
+                                }
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

@@ -6,6 +6,10 @@ const Project = mongoose.Schema({
         required: true,
         min: 3
     },
+    image: {
+        type: String,
+        required: true,
+    },
     videoLink: {
         type: String,
         required: true,

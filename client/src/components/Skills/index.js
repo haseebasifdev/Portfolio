@@ -6,7 +6,7 @@ const Skills = () => {
     , "Laravel", "MYSQL", "HTML5", "CSS3", "Bootstrap", "TensorFlow", "Android"]
   const src = "/static/media/Bootstrap.0c209802.png"
   return (
-    <div className="container skills" id="skills">
+    <div className="container skills" >
       <h1 className="text-center font-weight-bold">Skills</h1>
       <div className=" text-center">Languages and Technologies that I have learned and applied to my projects</div>
       <br />
