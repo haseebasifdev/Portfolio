@@ -1,18 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, Redirect } from 'react-router-dom'
-import {sigout} from "../../../action/auth.action"
+import { sigout } from "../../../action/auth.action"
 import "./style.css"
 const AdminNavbar = (props) => {
-    
-    const dispatch=useDispatch()
-    const Logout=()=>{
+
+    const dispatch = useDispatch()
+    const Logout = () => {
         dispatch(sigout())
     }
     const auth = useSelector(state => state.auth)
     if (!auth.authencate) {
         return <Redirect to="/" />
-      }
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,7 +30,7 @@ const AdminNavbar = (props) => {
                             <NavLink to="/admin/projects" className="nav-link">Projects</NavLink>
                         </li>
                         <li className="nav-item logout">
-                            <button onClick={()=>Logout()} className="nav-link btn btn-danger ">Logout</button>
+                            <button onClick={() => Logout()} className="nav-link btn btn-danger ">Logout</button>
                         </li>
                     </ul>
                 </div>

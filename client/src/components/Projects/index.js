@@ -1,8 +1,22 @@
 import React from 'react'
+import { useState } from 'react'
+import { Modal } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
 
 
 import "./style.css"
 const Projects = () => {
+
+  const projects = useSelector(state => state.projects.projects)
+  const [project, setproject] = useState({})
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = (p) => {
+    setproject(p)
+    console.log({ p });
+    setShow(true)
+  };
   return (
     <div className="container">
       <h1 className="projects text-center font-weight-bold">Projects</h1>
@@ -21,16 +35,76 @@ const Projects = () => {
         <button type="button" class="btn mx-2 btn-light">C++</button>
       </div>
       <div className="row">
-        <div className="col-4">
-          <div className="card bg-dark text-white">
-            <img className="card-img" src="images/Laravel.png" alt="Card image" />
-            <div className="card-img-overlay text-center textproject">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p className="card-text">Last updated 3 mins ago</p>
+        {
+          projects.map(project => {
+            return (
+              <>
+                <div className="col-4 showproject" onClick={() => handleShow(project)}>
+                  <div className="project_container">
+                    <img className="card-img image" src={project.image} alt="Card image" width="100%" height="400px" />
+                    <div className="card-img-overlay image_text text-center">
+                      <h5 className="card-title">{project.name}</h5>
+                      <p className="card-text">{project.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )
+          })
+        }
+
+
+
+        <Modal
+          show={show}
+          onHide={handleClose}
+          // backdrop="static"
+          // keyboard={false}
+          className="text-muted"
+        >
+          <Modal.Body>
+            <iframe width="100%" height="315" frameborder="0" allow="autoplay" encrypted-media
+              src={`${project.videoLink}?autoplay=1`}>
+            </iframe>
+            <h4 className="mt-4 ">{project.name}</h4>
+            {
+              project.description
+            }
+            <div className="border-bottom py-2">
+              TECHNOLOGIES
+              <br />
+              {
+                project.tech ?
+                  project.tech.map(t => {
+                    return (
+                      <span className="mr-2 font-weight-bold">{t} |</span>
+                    )
+                  }) : ""
+              }
+
             </div>
-          </div>
-        </div>
+            <div className="border-bottom py-2">
+              LIVE WEBSITE
+                <div className="">
+                <a href={project.live} target="_blank">
+                  {
+                    project.live
+                  }
+                </a>
+              </div>
+            </div>
+            <div className="py-2">
+              GITHUB
+                <div className="">
+                <a href={project.github} target="_blank">
+                  {
+                    project.github
+                  }
+                </a>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
       </div>
     </div>
   )

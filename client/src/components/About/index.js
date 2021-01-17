@@ -10,9 +10,9 @@ const About = () => {
                 <div className="col-md-7 col-sm-12">
                     <h3>
                         Hey! I'm Haseeb Asif
-                        <br />
+                        <br/>
                         A Full Stack Developer
-                        <br />
+                        <br/>
                         From Lahore, Pakistan
                     </h3>
                     <div className="text-muted">
@@ -27,9 +27,9 @@ const About = () => {
                             I enjoy learning new technologies and growing in a field that is constantly being pushed to new boundaries.
                             <br />
                         <br />
-                            Feel free to connect with me! Let's talk about web dev, tech, sports, photography, video games, cooking,
+                            Feel free to connect with me! Let's talk about web dev, tech, sports, photography, video games,
                              or how I can be of help to your team or business!
-                             I'd love to get to know more developers and expand my network. I also know a thing or two about beer.
+                             I'd love to get to know more developers and expand my network.
 
                     </div>
                     <br />
@@ -40,19 +40,19 @@ const About = () => {
                     <div>
                         <h6 className="mb-2">
                             <span className="text-primary">Mail</span>:
-                            <a className="text-muted links" href="mailto:haseebasif147@gmail.com"> haseebasif147@gmail.com</a>
+                            <a className="text-muted " href="mailto:haseebasif147@gmail.com"> haseebasif147@gmail.com</a>
                         </h6>
                         <h6 className="mb-2">
                             <span className="text-primary">Phone</span>:
-                            <a className="text-muted links" href="tel:+923008888888"> +923008888888</a>
+                            <a className="text-muted " href="tel:+923081843946"> +923081843946</a>
                         </h6>
                         <h6 className="mb-2">
                             <span className="text-primary">Linkedin</span>:
-                            <a className="text-muted links" href="https://www.linkedin.com/in/haseebasif01/" target="_blank"> https://www.linkedin.com/in/haseebasif01/</a>
+                            <a className="text-muted " href="https://www.linkedin.com/in/haseebasif01/" target="_blank"> https://www.linkedin.com/in/haseebasif01/</a>
                         </h6>
                         <h6 className="mb-2">
                             <span className="text-primary">Github</span>:
-                            <a className="text-muted links" href="https://github.com/haseebasifdev" target="_blank"> https://github.com/haseebasifdev</a>
+                            <a className="text-muted " href="https://github.com/haseebasifdev" target="_blank"> https://github.com/haseebasifdev</a>
                         </h6>
                     </div>
                 </div>

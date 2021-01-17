@@ -47,6 +47,7 @@ const AdminSkills = () => {
     return (
         <div>
             <AdminNavbar>
+                
                 <Skills/>
                 <Tools/>
                 <Modal

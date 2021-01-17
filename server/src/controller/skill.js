@@ -1,4 +1,5 @@
 
+const Project = require("../model/project");
 const Skill=require("../model/skill")
 
 exports.Skill=(req,res)=>{
@@ -35,10 +36,19 @@ exports.getSkills=(req,res)=>{
         }
         if(allSkills)
         {
-            const skills=allSkills.filter(skill=>skill.skill==true)
-            const tools=allSkills.filter(skill=>skill.skill==false)
-            return res.status(200).json({
-                skills,tools
+            Project.find()
+            .exec((error,projects)=>{
+                if(error)
+                {
+                    return res.status(400).json({
+                        message:error
+                    })
+                }
+                const skills=allSkills.filter(skill=>skill.skill==true)
+                const tools=allSkills.filter(skill=>skill.skill==false)
+                return res.status(200).json({
+                    skills,tools,projects
+                })
             })
         }
     })

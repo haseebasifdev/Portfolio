@@ -1,29 +1,40 @@
-import React from 'react'
-import About from '../About'
-import Contactus from '../Contactus'
-import Footer from '../Footer'
+import React, { Suspense, lazy } from 'react'
 import NavigationBar from '../NavigationBar'
-import Projects from '../Projects'
-import Skills from '../Skills'
-import Tools from '../Tools'
-
+const About = lazy(() => import("../About"))
+const Contactus = lazy(() => import("../Contactus"))
+const Footer = lazy(() => import("../Footer"))
+const Projects = lazy(() => import("../Projects"))
+const Skills = lazy(() => import("../Skills"))
+const Tools = lazy(() => import("../Tools"))
 const Home = () => {
   return (
-    <div>
+    <>
       <div id="home" />
-      <NavigationBar/>
-      <div  id="about" />
-      <About/>
-      <div id="projects" />
-      <Projects/>
-      <div id="skills"/>
-      <Skills/>
-      <div id="tools" />
-      <Tools/>
+      <NavigationBar />
+      <Suspense fallback={<div>Loading...</div>}>
+        <div id="about" />
+        <About />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div id="projects" />
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div id="skills" />
+        <Skills />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div id="tools" />
+        <Tools />
+      </Suspense>
       <div id="contact" />
-      <Contactus/>
-      <Footer/>
-    </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Contactus />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Footer />
+      </Suspense>
+    </>
   )
 }
 

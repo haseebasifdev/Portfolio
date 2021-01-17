@@ -1,9 +1,15 @@
 const Project=require("../model/project")
 
 exports.Project=(req,res)=>{
-    const {name,email,subject,message}=req.body;
+    // const { name,
+    //             image,
+    //             videoLink,
+    //             description,
+    //             live,
+    //             tech,
+    //             github}=req.body;
     const _Project=new Project({
-        name,email,subject,message
+        ...req.body
     })
     _Project.save((error,message)=>{
         if(error)

@@ -1,5 +1,5 @@
 import axios from "../helpers/axios"
-import { authConstants, initialDataConstants, SkillsConstants } from "../constants"
+import { authConstants, initialDataConstants, ProjectConstants, SkillsConstants } from "../constants"
 
 export const login = (userData) => {
     return async (dispatch) => {
@@ -70,6 +70,12 @@ export const initialData=()=>{
                 payload:{
                     skills:res.data.skills,
                     tools:res.data.tools,
+                }
+            })
+            dispatch({
+                type:ProjectConstants.PROJECT_SUCCESS,
+                payload:{
+                    projects:res.data.projects
                 }
             })
         }

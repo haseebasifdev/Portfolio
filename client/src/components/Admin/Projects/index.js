@@ -22,7 +22,7 @@ const Projects = () => {
         if (URL) {
             const postdata = {
                 name,
-                image,
+                image:URL,
                 videoLink,
                 description,
                 live,
@@ -32,8 +32,13 @@ const Projects = () => {
             }
             console.log("postdat ", postdata);
             const resdata = await axiosInstance.post("/project", postdata)
-            setname("")
-            setimage("")
+            // setname("")
+            // setimage("")
+            // setvideoLink("")
+            // setdescription("")
+            // setlive("")
+            // settech([])
+            // setgithub("")
         }
     }, [URL])
     const AddProject = async (e) => {
@@ -48,22 +53,11 @@ const Projects = () => {
             "upload_preset": "insta-clone",
             "cloud_name": "haseebasif"
         }
-        const postdata = {
-            name,
-            image,
-            videoLink,
-            description,
-            live,
-            tech,
-            github
-
-        }
-        // const res = await axios
-        //     .post("https://api.cloudinary.com/v1_1/haseebasif/image/upload", formdata).then(res => {
-        //         setURL(res.data.url)
-        //         console.log(res);
-        //     })
-        console.log({ postdata });
+        const res = await axios
+            .post("https://api.cloudinary.com/v1_1/haseebasif/image/upload", formdata).then(res => {
+                setURL(res.data.url)
+                console.log(res);
+            })
     }
     const handleChange = (e) => {
         let valuesss = Array.from(e.target.selectedOptions, option => option.value);
@@ -83,7 +77,7 @@ const Projects = () => {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="example-custom-modal-styling-title">
-                            Add New Skill
+                            Add New project
                     </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -93,7 +87,7 @@ const Projects = () => {
                                     className="my-2"
                                     value={name}
                                     onChange={(e) => setname(e.target.value)}
-                                    size="sm" type="text" placeholder="Tech Name" />
+                                    size="sm" type="text" placeholder="Project Name" />
                             </Form.Group>
 
 
@@ -126,7 +120,7 @@ const Projects = () => {
                                     value={tech}
                                     className="selectpicker" as="select" multiple>
                                     {
-                                        skills.map(s => <option value={s._id}>{s.name}</option>)
+                                        skills.map(s => <option value={s.name}>{s.name}</option>)
                                     }
                                 </Form.Control>
                             </Form.Group>

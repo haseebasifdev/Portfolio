@@ -3,6 +3,11 @@ export const SkillsConstants={
     SKILL_SUCCESS:"SKILL_SUCCESS",
     SKILL_FAILURE:"SKILL_FAILURE",
 }
+export const ProjectConstants={
+    PROJECT_REQUEST:"PROJECT_REQUEST",
+    PROJECT_SUCCESS:"PROJECT_SUCCESS",
+    PROJECT_FAILURE:"PROJECT_FAILURE",
+}
 export const initialDataConstants={
     DATA_REQUEST:"DATA_REQUEST",
     DATA_SUCCESS:"DATA_SUCCESS",
