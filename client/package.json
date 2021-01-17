@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@loadable/component": "^5.14.1",
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
@@ -13,6 +14,8 @@
     "react-dom": "^17.0.1",
     "react-dropdown-select": "^4.7.3",
     "react-icons": "^4.1.0",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-loadable": "^5.5.0",
     "react-redux": "^7.2.2",
     "react-rotating-text": "^1.4.1",
     "react-router-dom": "^5.2.0",

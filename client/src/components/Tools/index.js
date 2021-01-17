@@ -1,6 +1,8 @@
 import React from 'react'
 import "./style.css"
 import { useSelector } from 'react-redux'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const Tools = () => {
   const tools=useSelector(state=>state.skills.tools)
   return (
@@ -15,7 +17,9 @@ const Tools = () => {
             return (
               <div key={tool._id} className="col-md-4 col-sm-6 col-xl-3 text-center p-4">
                 <div className="my-auto d-flex align-items-center justify-content-center img">
-                  <img className="skillimage" src={tool.image} alt={`${tool} image`} width="30%" height="100px  " />
+                  <LazyLoadImage
+                  effect="blur"
+                   className="skillimage" src={tool.image} alt={`${tool} image`} width="50%" height="100px  " />
                 </div>
                 <h4 className="">
                   {tool.name}
