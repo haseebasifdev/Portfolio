@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 
-
 import "./style.css"
+import ImageLazyLoading from '../LoadAbleImages';
 const Projects = () => {
-
   const projects = useSelector(state => state.projects.projects)
   const [project, setproject] = useState({})
   const [show, setShow] = useState(false);
@@ -25,15 +24,7 @@ const Projects = () => {
         <h6 >Worried About my coding experience? Check them here:</h6>
         <a className="btn btn-primary text-center my-4" href="https://github.com/haseebasifdev" target="_blank" role="button">Github</a>
       </div>
-      <div className="text-center mb-4">
-        <button type="button" class="btn mx-2 btn-primary">JavaScript</button>
-        <button type="button" class="btn mx-2 btn-secondary">Laravel</button>
-        <button type="button" class="btn mx-2 btn-success">Vue.js</button>
-        <button type="button" class="btn mx-2 btn-danger">React.js</button>
-        <button type="button" class="btn mx-2 btn-warning">Android</button>
-        <button type="button" class="btn mx-2 btn-info">Python</button>
-        <button type="button" class="btn mx-2 btn-light">C++</button>
-      </div>
+
       <div className="row">
         {
           projects.map(project => {
@@ -41,7 +32,9 @@ const Projects = () => {
               <>
                 <div className="col-4 showproject" onClick={() => handleShow(project)}>
                   <div className="project_container">
-                    <img className="card-img image" src={project.image} alt="Card image" width="100%" height="400px" />
+                    <ImageLazyLoading 
+                    effect="blur" className="card-img image" src={project.image}
+                     alt="Card image" width="100%"  />
                     <div className="card-img-overlay image_text text-center">
                       <h5 className="card-title">{project.name}</h5>
                       <p className="card-text">{project.description}</p>
