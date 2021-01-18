@@ -6,7 +6,6 @@ import './App.css';
 // import AdminSkills from './components/Admin/Skills';
 // import Projects from './components/Admin/Projects';
 import PrivateRoutes from "./components/PrivateRoutes/PrivateRoute"
-import "./scss/style.css"
 import {
   Switch,
   Route,

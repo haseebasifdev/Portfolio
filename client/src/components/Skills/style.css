@@ -2,9 +2,6 @@
     margin-top: 100px;
 }
 .skillimage{
-    border-radius: 10px;
-}
-.skillimage{
 animation: skillsimage 1s linear;
 }
 @keyframes skillsimage{

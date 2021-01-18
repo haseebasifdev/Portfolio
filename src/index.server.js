@@ -18,6 +18,13 @@ app.use("/api",contactRoute)
 app.use("/api",projectRoute)
 app.use("/api",AuthRoute)
 app.use("/api",SkillRoute)
+if (process.env.NODE_ENV=="production") {
+    app.use(express.static("client/build"))
+    const path=require("path")
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname,"client",'build','index.html'))
+    });
+}
 mongoose.connect(process.env.MONGODBURL,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(res=>{
     console.log("Database Connected");

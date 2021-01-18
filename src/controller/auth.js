@@ -1,5 +1,5 @@
 const bcrypt=require('bcryptjs')
-const { JWT_SECRET } = require("../middleware/keys")
+const { JWT_SECRET } = require("../config/keys")
 const JWT=require('jsonwebtoken')
 const User=require("../model/auth")
 const requireLogin=require('../middleware/requireLogin')
