@@ -1,0 +1,81 @@
+.mainNavbar{
+    height: 700px;
+    background-color: #2d2d2d ;
+}
+.gotoabout{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-left: -50px;
+    align-items: center;
+}
+.navlinkblack{
+    color: black;
+    &:hover{
+        text-decoration: none;
+        color: black;
+        border-bottom: 1px solid black;
+    }
+}
+.navlinkwhite{
+    color: white;
+    &:hover{
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+}
+.name-div{
+   font-family: 'Lato', 'Open Sans', sans-serif;
+   .name{
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    font-weight: 800;
+    h1{
+        font-size: 64px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        line-height: 1.2;
+    }
+}
+}
+.typeWritertext{
+    position: absolute;
+    color: white;
+    top: 55%;
+    left: 8%;
+    .title{
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 5px;
+        font-weight: 500;
+    }
+}
+
+li{
+    cursor: pointer;
+}
+.gotohome{
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.react-rotating-text-cursor {
+    animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+  }
+  
+  @keyframes blinking-cursor {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

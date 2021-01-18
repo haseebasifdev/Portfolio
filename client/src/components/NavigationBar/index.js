@@ -33,7 +33,7 @@ const NavigationBar = () => {
     window.addEventListener('scroll', scroolbtn)
     return (
         <div>
-            <div className="navbarimg" id="home">
+            <div className="mainNavbar" id="home">
                 <Navbar bg={navbar ? "light" : "transparent"} expand="lg" fixed="top" className="py-3">
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -75,12 +75,12 @@ const NavigationBar = () => {
                         </span>
                     </div>
                 </div>
-                <div className={`scroll ${scrollbtn} bg-dark linktop `}>
+                <div className={`${scrollbtn} btn btn-dark border-0 gotohome `}>
                     <Link to="home" className={``} spy={true} smooth={true}>
                         <FaAngleDoubleUp className="text-white" size={25} />
                     </Link>
                 </div>
-                <div className={`gotoprofile`}>
+                <div className={`gotoabout`}>
                     <Link to="about" className={`btn btn-outline-dark btn-sm border`} spy={true} smooth={true}>
                         <FaAngleDoubleDown className="text-white" size={15} />
                     </Link>

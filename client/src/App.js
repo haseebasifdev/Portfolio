@@ -14,11 +14,6 @@ import {
 import Loadable from 'react-loadable';
 import { useDispatch, useSelector } from 'react-redux';
 import { initialData, isLoggedIn } from './action/auth.action';
-// const Home = lazy(() => import("./components/Home"))
-// const Login = lazy(() => import("./components/Login"))
-// const Admin = lazy(() => import("./components/Admin"))
-// const AdminSkills = lazy(() => import("./components/Admin/Skills"))
-// const Projects = lazy(() => import("./components/Admin/Projects"))
 const Home = Loadable({
   loader: () => import(/* webpackChunkName: "Home"*/"./components/Home"),
   loading: "loading..."
